@@ -596,6 +596,24 @@
                         </div>
                     </div>
                 </div>
+                <!-- Card 6 - Flip Card -->
+                <div class="card animate__animated animate__fadeInUp animate__delay-4s flip-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-hospital-user card-icon"></i>
+                            <h3 class="card-title">Cobertura GMM</h3>
+                            <p class="card-description">
+                            Cobertura Ambulatoria y Hospitalaria de <strong>$500,000</strong> (<em>luego de superar la cobertura inicial</em>).
+                            </p>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="card-title">Si utilizo la Red Élite...</h3>
+                            <p class="card-description">
+                            El copago será del 80% a costos del plan base del contrato.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -806,18 +824,11 @@
                         <li>Hasta <strong>$125</strong> mensuales (Pharmacys).</li>
                     </ul>
                 </div>
-                <div class="card animate__animated animate__fadeInUp animate__delay-3s" style="grid-column: 2; grid-row: 2;">
+                <div class="card animate__animated animate__fadeInUp animate__delay-3s" style="grid-column: 2 / span 3; grid-row: 2;">
                     <i class="fas fa-dumbbell card-icon"></i>
                     <h3 class="card-title">Terapias</h3>
                     <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
                         <li>Físicas, respiratorias, lenguaje, cardiacas, ocupacionales, psicopedagógicas y cognitivas al <strong>80%</strong>.</li>
-                    </ul>
-                </div>
-                <div class="card animate__animated animate__fadeInUp animate__delay-4s" style="grid-column: 3; grid-row: 2;">
-                    <i class="fas fa-hourglass-start card-icon"></i>
-                    <h3 class="card-title">Período de Carencia</h3>
-                    <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
-                        <li><strong>30 días</strong></li>
                     </ul>
                 </div>
             </div>
@@ -887,18 +898,38 @@
         <div class="slide" data-slide="10">
             <h1 class="slide-title">Cobertura Bajo Reembolso</h1>
             <p class="slide-subtitle">Beneficios adicionales cubiertos bajo modalidad de reembolso</p>
-            <div class="cards-container" style="display: flex; flex-direction: column; gap: 1.2rem; align-items: flex-start; max-width: 700px; margin: 0 auto;">
-                <div class="card animate__animated animate__fadeInUp" style="font-size: 1.1rem;">
-                    <ul style="margin-left: 1.2em; color: var(--primary-color);">
-                        <li>Cobertura dental por Accidente (como cualquier incapacidad)</li>
-                        <li>Tratamiento inmunológico (como cualquier incapacidad)</li>
-                        <li>Cobertura de tirillas mensuales por Diabetes (60 tirillas mensuales hasta <strong>$150,00</strong>)</li>
-                        <li>Vacunas (como cualquier incapacidad)</li>
-                        <li>Cobertura Anual para Métodos Anticonceptivos (hasta <strong>$100</strong>)</li>
-                        <li>Tratamientos de Enfermedades de Transmición Sexual (como cualquier incapacidad)</li>
-                        <li>Leche medicada (hasta <strong>$900</strong>)</li>
-                        <li>Medicina que no se encuentre en Vademecum</li>
-                    </ul>
+            <div class="cards-container" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto;">
+                <div class="card animate__animated animate__fadeInUp">
+                    <h3 class="card-title" style="font-size: 1.1rem;">Cobertura dental por Accidente</h3>
+                    <div class="card-description">Como cualquier incapacidad</div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp">
+                    <h3 class="card-title" style="font-size: 1.1rem;">Tratamiento inmunológico</h3>
+                    <div class="card-description">Como cualquier incapacidad</div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp">
+                    <h3 class="card-title" style="font-size: 1.1rem;">Tirillas mensuales por Diabetes</h3>
+                    <div class="card-description">60 tirillas mensuales hasta <strong>$150,00</strong></div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp">
+                    <h3 class="card-title" style="font-size: 1.1rem;">Vacunas</h3>
+                    <div class="card-description">Como cualquier incapacidad</div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp">
+                    <h3 class="card-title" style="font-size: 1.1rem;">Métodos Anticonceptivos</h3>
+                    <div class="card-description">Cobertura anual hasta <strong>$100</strong></div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp">
+                    <h3 class="card-title" style="font-size: 1.1rem;">Enfermedades de Transmisión Sexual</h3>
+                    <div class="card-description">Como cualquier incapacidad</div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp">
+                    <h3 class="card-title" style="font-size: 1.1rem;">Leche medicada</h3>
+                    <div class="card-description">Hasta <strong>$900</strong></div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp">
+                    <h3 class="card-title" style="font-size: 1.1rem;">Medicina fuera de Vademecum</h3>
+                    <div class="card-description">Medicamentos que no se encuentren en Vademecum</div>
                 </div>
             </div>
         </div>
