@@ -532,7 +532,7 @@
                             <i class="fas fa-dollar-sign card-icon"></i>
                             <h3 class="card-title">Cobertura Máxima</h3>
                             <p class="card-description">
-                                Hasta <strong>$4,200</strong> por persona por año de póliza.
+                                Hasta <strong>$4,000</strong> por persona por año de póliza.
                             </p>
                         </div>
                     </div>
@@ -543,7 +543,7 @@
                             <i class="fas fa-file-invoice-dollar card-icon"></i>
                             <h3 class="card-title">Deducible</h3>
                             <p class="card-description">
-                                <strong>$100,00</strong><br>
+                                <strong>$120,00</strong><br>
                                 <span style="font-size: 0.95em; color: var(--text-light);">Deducible anual por persona</span>
                             </p>
                         </div>
@@ -555,7 +555,7 @@
                             <i class="fas fa-user-shield card-icon"></i>
                             <h3 class="card-title">Cobertura Preexistencias</h3>
                             <p class="card-description">
-                                Hasta <strong>$4,200</strong> para condiciones preexistentes.
+                                Hasta <strong>$4,000</strong> para condiciones preexistentes.
                             </p>
                         </div>
                     </div>
@@ -693,8 +693,16 @@
         <div class="slide" data-slide="5">
             <h1 class="slide-title">Cobertura Ambulatoria</h1>
             <p class="slide-subtitle">Servicios y beneficios ambulatorios</p>
-            <div class="cards-container">
-                <div class="card animate__animated animate__fadeInUp">
+            <div class="cards-container" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, auto); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+                <div class="card animate__animated animate__fadeInUp" style="min-width: 400px; min-height: 160px;">
+                    <i class="fas fa-user-md card-icon"></i>
+                    <h3 class="card-title">Crédito en Consultas Médicas</h3>
+                    <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
+                        <li>Medicina general, interna, ginecología y pediatría en Red: <strong>$4,00</strong>.</li>
+                        <li>Excepto en Centro Médico Familiar y Mediglobal: <strong>sin costo</strong>.</li>
+                    </ul>
+                </div>
+                <div class="card animate__animated animate__fadeInUp" style="min-width: 400px; min-height: 160px;">
                     <i class="fas fa-house-user card-icon"></i>
                     <h3 class="card-title">Médico a Domicilio</h3>
                     <p class="card-description">
@@ -702,7 +710,7 @@
                         <span style="font-size: 0.95em; color: var(--text-light);">Teléfono: 5007070 opción 1</span>
                     </p>
                 </div>
-                <div class="card animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="card animate__animated animate__fadeInUp animate__delay-1s" style="min-width: 400px; min-height: 160px;">
                     <i class="fas fa-video card-icon"></i>
                     <h3 class="card-title">Consulta Médica por Telemedicina</h3>
                     <p class="card-description">
@@ -710,12 +718,15 @@
                         <span style="font-size: 0.95em; color: var(--text-light);">Sin aplicación de deducible<br>Atención 24/7</span>
                     </p>
                 </div>
-                <div class="card animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="card animate__animated animate__fadeInUp animate__delay-2s" style="min-width: 400px; min-height: 160px;">
                     <i class="fas fa-user-md card-icon"></i>
-                    <h3 class="card-title">Consulta Médica Guayaquil</h3>
+                    <h3 class="card-title">Consultas Médicas (Libre Elección)</h3>
+                    <span style="font-size: 0.95em; color: var(--text-light);">Topes de consulta</span>
                     <p class="card-description">
-                        <strong>$82.45</strong><br>
-                        <span style="font-size: 0.95em; color: var(--text-light);">Tope de consulta en Guayaquil</span>
+                        <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
+                            <li>Guayaquil: <strong>$82.45</strong>. / Quito: <strong>$63.00</strong>. / Resto del país: <strong>$53.00</strong></li>
+                            <li>Excepto en Centro Médico Familiar y Mediglobal: <strong>sin costo</strong>.</li>
+                        </ul>
                     </p>
                 </div>
             </div>
@@ -767,23 +778,25 @@
             <h1 class="slide-title">Beneficios en Atenciones Ambulatorias</h1>
             <p class="slide-subtitle">Acceso preferencial y descuentos en servicios ambulatorios</p>
             <div class="cards-container" style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, auto); gap: 2rem; max-width: 1200px; margin: 0 auto;">
-                <div class="card animate__animated animate__fadeInUp" style="grid-column: 1 / span 2; grid-row: 1;">
-                    <i class="fas fa-vials card-icon"></i>
-                    <h3 class="card-title">Exámenes y Procedimientos</h3>
-                    <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
-                        <li>Mediante RDA al <strong>20%</strong> de copago.</li>
-                        <li>Consultas con médicos en red: <strong>Red Estándar</strong> $20. <strong>Red Élite</strong> $24. </li>
-                    </ul>
+                <div class="card animate__animated animate__fadeInUp" style="grid-column: 1 / span 3; grid-row: 1; display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; gap: 2rem;">
+                    <div style="flex: 2; min-width: 0;">
+                        <i class="fas fa-vials card-icon"></i>
+                        <h3 class="card-title">Exámenes y Procedimientos</h3>
+                        <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
+                            <li>Mediante RDA al <strong>20%</strong> de copago.</li>
+                            <li>Consultas con médicos en red: <strong>Red Estándar</strong> $20. <strong>Red Élite</strong> $24. </li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1; min-width: 180px; background: var(--secondary-color); border-radius: 18px; padding: 1.2em 1em; box-shadow: none;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 0.7em;">Requisitos</h5>
+                        <ul style="color: #fff; font-size: 0.98em; margin-left: 1.2em;">
+                            <li>Nombre Completo del médico</li>
+                            <li>Nombre del Paciente</li>
+                            <li>Fecha y hora de la cita</li>
+                            <li>Diagnóstico o Sintomatología</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="card animate__animated animate__fadeInUp animate__delay-1s" style="grid-column: 3; grid-row: 1;">
-                    <i class="fas fa-user-md card-icon"></i>
-                    <h3 class="card-title">Consultas Médicas con Crédito</h3>
-                    <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
-                        <li>Medicina general, interna, ginecología y pediatría en Red: <strong>$4,00</strong>.</li>
-                        <li>Excepto en Centro Médico Familiar y Mediglobal: <strong>sin costo</strong>.</li>
-                    </ul>
-                </div>
-                <div style="grid-column: 3; grid-row: 1;"></div>
                 <div class="card animate__animated animate__fadeInUp animate__delay-2s" style="grid-column: 1; grid-row: 2;">
                     <i class="fas fa-prescription-bottle-alt card-icon"></i>
                     <h3 class="card-title">Crédito en Farmacias</h3>
@@ -817,7 +830,7 @@
                     <i class="fas fa-baby card-icon"></i>
                     <h3 class="card-title">Cobertura Maternidad</h3>
                     <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
-                        <li>Sin copago. Hasta <strong>$1,200</strong></li>
+                        <li>Sin copago. Hasta <strong>$2,200</strong></li>
                         <li>Período de carencia: <strong>60 días</strong></li>
                     </ul>
                 </div>
@@ -832,14 +845,14 @@
                     <i class="fas fa-heartbeat card-icon"></i>
                     <h3 class="card-title">Complicaciones de Maternidad</h3>
                     <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
-                        <li>Hasta <strong>$4,200</strong></li>
+                        <li>Hasta <strong>$4,000</strong></li>
                     </ul>
                 </div>
                 <div class="card animate__animated animate__fadeInUp animate__delay-3s">
                     <i class="fas fa-baby-carriage card-icon"></i>
                     <h3 class="card-title">Cuidados del Recién Nacido</h3>
                     <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
-                        <li>Hasta <strong>$4,200</strong></li>
+                        <li>Hasta <strong>$4,000</strong></li>
                     </ul>
                 </div>
             </div>
@@ -933,7 +946,42 @@
                 <em>En caso de emergencia, acudir a cualquiera de estos prestadores o comunicarse con los contactos de la siguiente diapositiva.</em>
             </div>
         </div>
+
+        <!-- SLIDE 15: ASISTENCIA EN VIAJES -->
         <div class="slide" data-slide="13">
+            <h1 class="slide-title">Asistencia en Viajes</h1>
+            <p class="slide-subtitle">Emergencias médicas en viajes al exterior</p>
+            <div class="cards-container" style="display: flex; flex-direction: column; gap: 1.2rem; align-items: flex-start; max-width: 700px; margin: 0 auto;">
+                <div class="card animate__animated animate__fadeInUp" style="font-size: 1.1rem;">
+                    <ul style="margin-left: 1.2em; color: var(--primary-color);">
+                        <li>Servicio de asistencia médica para emergencias en viajes al exterior por negocio o turismo. Previa autorización por Asisken para realizar la activación con mínimo 15 días de anticipación al viaje. No aplica vía reembolso. Aplican condiciones del proveedor*</li>
+                        <li>Aplica para 2 eventos por persona anual hasta máximo 30 días de viaje</li>
+                        <li>Se debe llenar formulario</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 16: PERÍODOS DE CARENCIA -->
+        <div class="slide" data-slide="14">
+            <h1 class="slide-title">Períodos de Carencia</h1>
+            <p class="slide-subtitle">Días de espera para acceder a cada cobertura</p>
+            <div class="cards-container" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; max-width: 900px; margin: 0 auto;">
+                <div class="card animate__animated animate__fadeInUp" style="min-width: 260px; max-width: 320px; text-align: center;">
+                    <h3 class="card-title">Ambulatoria</h3>
+                    <div class="card-description" style="font-size: 1.2rem; margin-top: 1rem;">Días de carencia: <strong>30 días</strong></div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp animate__delay-1s" style="min-width: 260px; max-width: 320px; text-align: center;">
+                    <h3 class="card-title">Hospitalaria</h3>
+                    <div class="card-description" style="font-size: 1.2rem; margin-top: 1rem;">Días de carencia: <strong>90 días</strong></div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp animate__delay-2s" style="min-width: 260px; max-width: 320px; text-align: center;">
+                    <h3 class="card-title">Maternidad</h3>
+                    <div class="card-description" style="font-size: 1.2rem; margin-top: 1rem;">Días de carencia: <strong>60 días</strong></div>
+                </div>
+            </div>
+        </div>
+        <div class="slide" data-slide="15">
             <h1 class="slide-title">Contactos de Atención</h1>
             <p class="slide-subtitle">Información de contacto para afiliados</p>
             <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: center; align-items: stretch; margin-top: 2.5rem;">
@@ -960,14 +1008,14 @@
                 <em>Estos contactos están disponibles para cualquier requerimiento o emergencia de los afiliados del plan.</em>
             </div>
         </div>
-        <div class="slide" data-slide="14">
+        <div class="slide" data-slide="16">
             <h1 class="slide-title">Costos del Plan</h1>
             <p class="slide-subtitle">Elige la opción que mejor se adapte a tus necesidades</p>
             <div class="cards-container" style="display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: center; align-items: stretch; margin-top: 2.5rem;">
                 <!-- Card Titular -->
                 <div class="card animate__animated animate__fadeInUp" style="min-width: 260px; max-width: 320px; flex: 1 1 260px; text-align: center; border: 2px solid var(--secondary-color); box-shadow: 0 8px 24px rgba(0,140,126,0.08);">
                     <h3 class="card-title" style="font-size: 1.4rem; margin-bottom: 0.5rem;">Titular</h3>
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 0.5rem;">$14.62</div>
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 0.5rem;">$33.31</div>
                     <div class="card-description" style="font-size: 1.1rem; margin-bottom: 1.2rem;">Cobertura individual para el titular del plan.</div>
                     <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem 0; color: var(--text-light);">
                         <li><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> Acceso a toda la red</li>
@@ -977,7 +1025,7 @@
                 <!-- Card Titular + 1 Beneficiario -->
                 <div class="card animate__animated animate__fadeInUp animate__delay-1s" style="min-width: 260px; max-width: 320px; flex: 1 1 260px; text-align: center; border: 2.5px solid var(--accent-color); box-shadow: 0 12px 32px rgba(226,171,51,0.10); background: var(--light-bg);">
                     <h3 class="card-title" style="font-size: 1.4rem; margin-bottom: 0.5rem;">Titular + 1 Beneficiario</h3>
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-color); margin-bottom: 0.5rem;">$53.07</div>
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-color); margin-bottom: 0.5rem;">$103.99</div>
                     <div class="card-description" style="font-size: 1.1rem; margin-bottom: 1.2rem;">Incluye al titular y un beneficiario adicional.</div>
                     <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem 0; color: var(--text-light);">
                         <li><i class="fas fa-check-circle" style="color: var(--secondary-color);"></i> Cobertura para ambos</li>
@@ -987,7 +1035,7 @@
                 <!-- Card Titular + Familia -->
                 <div class="card animate__animated animate__fadeInUp animate__delay-2s" style="min-width: 260px; max-width: 320px; flex: 1 1 260px; text-align: center; border: 2px solid var(--primary-color); box-shadow: 0 8px 24px rgba(12,41,57,0.10);">
                     <h3 class="card-title" style="font-size: 1.4rem; margin-bottom: 0.5rem;">Titular + Familia</h3>
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.5rem;">$95.38</div>
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.5rem;">$178.89</div>
                     <div class="card-description" style="font-size: 1.1rem; margin-bottom: 1.2rem;">Cobertura para el titular y su núcleo familiar.</div>
                     <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem 0; color: var(--text-light);">
                         <li><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> Protección integral</li>
@@ -997,41 +1045,6 @@
             </div>
             <div style="margin-top: 2.5rem; text-align: center; color: var(--text-light); font-size: 1.05rem;">
                 <em>Valores mensuales. Consulta condiciones y detalles con tu ejecutivo de cuenta.</em>
-            </div>
-        </div>
-
-        <!-- SLIDE 15: ASISTENCIA EN VIAJES -->
-        <div class="slide" data-slide="15">
-            <h1 class="slide-title">Asistencia en Viajes</h1>
-            <p class="slide-subtitle">Emergencias médicas en viajes al exterior</p>
-            <div class="cards-container" style="display: flex; flex-direction: column; gap: 1.2rem; align-items: flex-start; max-width: 700px; margin: 0 auto;">
-                <div class="card animate__animated animate__fadeInUp" style="font-size: 1.1rem;">
-                    <ul style="margin-left: 1.2em; color: var(--primary-color);">
-                        <li>Servicio de asistencia médica para emergencias en viajes al exterior por negocio o turismo. Previa autorización por Asisken para realizar la activación con mínimo 15 días de anticipación al viaje. No aplica vía reembolso. Aplican condiciones del proveedor*</li>
-                        <li>Aplica para 2 eventos por persona anual hasta máximo 30 días de viaje</li>
-                        <li>Se debe llenar formulario</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- SLIDE 16: PERÍODOS DE CARENCIA -->
-        <div class="slide" data-slide="16">
-            <h1 class="slide-title">Períodos de Carencia</h1>
-            <p class="slide-subtitle">Días de espera para acceder a cada cobertura</p>
-            <div class="cards-container" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; max-width: 900px; margin: 0 auto;">
-                <div class="card animate__animated animate__fadeInUp" style="min-width: 260px; max-width: 320px; text-align: center;">
-                    <h3 class="card-title">Ambulatoria</h3>
-                    <div class="card-description" style="font-size: 1.2rem; margin-top: 1rem;">Días de carencia: <strong>30 días</strong></div>
-                </div>
-                <div class="card animate__animated animate__fadeInUp animate__delay-1s" style="min-width: 260px; max-width: 320px; text-align: center;">
-                    <h3 class="card-title">Hospitalaria</h3>
-                    <div class="card-description" style="font-size: 1.2rem; margin-top: 1rem;">Días de carencia: <strong>90 días</strong></div>
-                </div>
-                <div class="card animate__animated animate__fadeInUp animate__delay-2s" style="min-width: 260px; max-width: 320px; text-align: center;">
-                    <h3 class="card-title">Maternidad</h3>
-                    <div class="card-description" style="font-size: 1.2rem; margin-top: 1rem;">Días de carencia: <strong>60 días</strong></div>
-                </div>
             </div>
         </div>
 
