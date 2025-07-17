@@ -181,6 +181,55 @@
             overflow: hidden;
         }
 
+        /* === FLIP CARD ESTILOS === */
+        .card {
+            perspective: 1000px;
+            /*height: 100%;*/
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .card.flip .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            top: 0;
+            left: 0;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-front {
+            z-index: 2;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            background: var(--accent-color);
+            border: 1px solid var(--contrast-color);
+            color: var(--primary-color);
+        }
+        [data-slide="3"] .card-back .card-title {
+            color: var(--text-dark);
+        }
+
+
         /* Efecto hover para cards */
         .card:hover {
             transform: translateY(-10px);
@@ -383,6 +432,32 @@
         .slide-title, .slide-subtitle, .card-title, .agenda-number, h1, h2, h3, h4, h5, h6 {
             font-family: 'Poppins', 'Inter', Arial, sans-serif;
         }
+        
+        /* Forzar altura igual en todas las cards del slide 3 */
+        [data-slide="3"] .cards-container {
+            align-items: stretch;
+        }
+        [data-slide="3"] .card {
+            height: 100%;
+            min-height: 260px;
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            padding: 0;
+        }
+        [data-slide="3"] .card-inner,
+        [data-slide="3"] .card-front,
+        [data-slide="3"] .card-back {
+            height: 100%;
+            min-height: 260px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .flip-card.flip .card-inner {
+            transform: rotateY(180deg);
+        }
     </style>
 </head>
 <body>
@@ -391,7 +466,7 @@
         
         <!-- Indicador de slide actual -->
         <div class="slide-indicator">
-            <span id="current-slide">1</span> / <span id="total-slides">13</span>
+            <span id="current-slide">1</span> / <span id="total-slides">16</span>
         </div>
 
         <!-- SLIDE 1: PORTADA -->
@@ -451,48 +526,75 @@
             <p class="slide-subtitle">Características principales de nuestro plan de asistencia médica</p>
             
             <div class="cards-container">
-                <div class="card animate__animated animate__fadeInUp">
-                    <i class="fas fa-dollar-sign card-icon"></i>
-                    <h3 class="card-title">Cobertura Máxima</h3>
-                    <p class="card-description">
-                        Hasta <strong>$4,200</strong> por persona por año de póliza.
-                    </p>
+                <div class="card animate__animated animate__fadeInUp flip-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-dollar-sign card-icon"></i>
+                            <h3 class="card-title">Cobertura Máxima</h3>
+                            <p class="card-description">
+                                Hasta <strong>$4,200</strong> por persona por año de póliza.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card animate__animated animate__fadeInUp animate__delay-1s">
-                    <i class="fas fa-file-invoice-dollar card-icon"></i>
-                    <h3 class="card-title">Deducible</h3>
-                    <p class="card-description">
-                        <strong>$100,00</strong><br>
-                        <span style="font-size: 0.95em; color: var(--text-light);">Deducible anual por persona</span>
-                    </p>
+                <div class="card animate__animated animate__fadeInUp animate__delay-1s flip-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-file-invoice-dollar card-icon"></i>
+                            <h3 class="card-title">Deducible</h3>
+                            <p class="card-description">
+                                <strong>$100,00</strong><br>
+                                <span style="font-size: 0.95em; color: var(--text-light);">Deducible anual por persona</span>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card animate__animated animate__fadeInUp animate__delay-2s">
-                    <i class="fas fa-user-shield card-icon"></i>
-                    <h3 class="card-title">Cobertura Preexistencias</h3>
-                    <p class="card-description">
-                        Hasta <strong>$4,200</strong> para condiciones preexistentes.
-                    </p>
+                <div class="card animate__animated animate__fadeInUp animate__delay-2s flip-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-user-shield card-icon"></i>
+                            <h3 class="card-title">Cobertura Preexistencias</h3>
+                            <p class="card-description">
+                                Hasta <strong>$4,200</strong> para condiciones preexistentes.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card animate__animated animate__fadeInUp animate__delay-3s">
-                    <i class="fas fa-stethoscope card-icon"></i>
-                    <h3 class="card-title">Cobertura Ambulatoria</h3>
-                    <p class="card-description">
-                        Al <strong>80%</strong>*, excepto en Red Élite (<strong>75%</strong>).
-                    </p>
+                <!-- Card 5 - Flip Card -->
+                <div class="card animate__animated animate__fadeInUp animate__delay-4s flip-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-stethoscope card-icon"></i>
+                            <h3 class="card-title">Cobertura Ambulatoria</h3>
+                            <p class="card-description">
+                                Al <strong>80%</strong>*, excepto en Red Élite (<strong>75%</strong>).
+                            </p>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="card-title">Si utilizo la Red Élite...</h3>
+                            <p class="card-description">
+                            El copago será del 75% a costos del plan base del contrato.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card animate__animated animate__fadeInUp animate__delay-4s">
-                    <i class="fas fa-hospital-user card-icon"></i>
-                    <h3 class="card-title">Cobertura Hospitalaria</h3>
-                    <p class="card-description">
-                        Al <strong>80%</strong>*, excepto en Red Estándar (<strong>90%</strong>).
-                    </p>
-                </div>
-                <div class="card animate__animated animate__fadeInUp animate__delay-5s" style="background: var(--light-bg); border-left: 4px solid var(--accent-color); min-width: 220px; max-width: 320px;">
-                    <i class="fas fa-info-circle card-icon" style="color: var(--accent-color);"></i>
-                    <h3 class="card-title">Aclaración sobre el 80%*</h3>
-                    <p class="card-description" style="font-size: 1.05rem;">
-                        El porcentaje de copago aplica a costos de prestadores en convenio de la red del plan.
-                    </p>
+                <!-- Card 5 - Flip Card -->
+                <div class="card animate__animated animate__fadeInUp animate__delay-4s flip-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-hospital-user card-icon"></i>
+                            <h3 class="card-title">Cobertura Hospitalaria</h3>
+                            <p class="card-description">
+                            Al <strong>80%</strong>*, excepto en Red Estándar (<strong>90%</strong>).
+                            </p>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="card-title">Si utilizo la Red Élite...</h3>
+                            <p class="card-description">
+                            El copago será del 80% a costos del plan base del contrato.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -503,31 +605,75 @@
             <p class="slide-subtitle">Red hospitalaria con copago diferenciado</p>
             
             <div class="logo-container">
-                <!-- Aquí agregaremos los logos de hospitales -->
-                <a href="https://asisken.com/red-asisken2/?w2dc_action=search&what_search=Red+Est%C3%A1ndar&address=Guayaquil" style="text-decoration: none;" target="_blank" rel="noopener noreferrer">
-                    <div class="logo-item">
-                        <i class="fas fa-hospital" style="font-size: 3rem; color: var(--primary-color);"></i>
+                <div class="logo-item flip-card" style="width: 340px; height: 340px;">
+                    <div class="card-inner">
+                        <div class="card-front" style="align-items: center; justify-content: center;">
+                            <i class="fas fa-hospital" style="font-size: 6rem; color: var(--primary-color);"></i>
+                            <div style="text-align: center; margin-top: 1.5rem; font-weight: 600; color: var(--primary-color); font-size: 2rem;">Red Estándar</div>
+                        </div>
+                        <div class="card-back" style="align-items: flex-start; justify-content: flex-start; padding: 2rem 1.2rem 1.2rem 1.2rem; overflow-y: auto;">
+                            <i class="fas fa-hospital" style="font-size: 2.2rem; color: var(--primary-color); margin-bottom: 0.5rem;"></i>
+                            <div style="font-weight: 700; color: var(--text-dark); font-size: 1.3rem; margin-bottom: 0.7rem;">Red Estándar</div>
+                            <ul style="color: var(--primary-color); font-size: 1.08em; margin: 0 0 0 1.2em; padding: 0;">
+                                <li>Clínica Kennedy Samborondón</li>
+                                <li>Hospitales de Junta de Beneficencia</li>
+                                <li>Hospital León Becerra</li>
+                                <li>Clínica Panamericana</li>
+                                <li>Clínica Unión</li>
+                                <li>Clínica Milenium</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div style="text-align: center; margin-top: 0.5rem; font-weight: 600; color: var(--primary-color);">Red Estándar</div>
-                </a>
-                <a href="https://asisken.com/red-asisken2/business-category/red/redpreferida/" style="text-decoration: none;" target="_blank" rel="noopener noreferrer">
-                    <div class="logo-item">
-                        <i class="fas fa-hospital" style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <div class="logo-item flip-card" style="width: 340px; height: 340px;">
+                    <div class="card-inner">
+                        <div class="card-front" style="align-items: center; justify-content: center;">
+                            <i class="fas fa-hospital" style="font-size: 6rem; color: var(--primary-color);"></i>
+                            <div style="text-align: center; margin-top: 1.5rem; font-weight: 600; color: var(--primary-color); font-size: 2rem;">Red Preferida</div>
+                        </div>
+                        <div class="card-back" style="align-items: flex-start; justify-content: flex-start; padding: 2rem 1.2rem 1.2rem 1.2rem; overflow-y: auto;">
+                            <i class="fas fa-hospital" style="font-size: 2.2rem; color: var(--primary-color); margin-bottom: 0.5rem;"></i>
+                            <div style="font-weight: 700; color: var(--text-dark); font-size: 1.3rem; margin-bottom: 0.7rem;">Red Preferida</div>
+                            <ul style="color: var(--primary-color); font-size: 1.08em; margin: 0 0 0 1.2em; padding: 0;">
+                                <li>Omnihospital</li>
+                                <li>Clínica Medysis</li>
+                                <li>Hospital Luis Vernaza</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div style="text-align: center; margin-top: 0.5rem; font-weight: 600; color: var(--primary-color);">Red Preferida</div>
-                </a>
-                <a href="https://asisken.com/red-asisken2/business-category/red/redtotal/" style="text-decoration: none;" target="_blank" rel="noopener noreferrer">
-                    <div class="logo-item">
-                        <i class="fas fa-hospital" style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <div class="logo-item flip-card" style="width: 340px; height: 340px;">
+                    <div class="card-inner">
+                        <div class="card-front" style="align-items: center; justify-content: center;">
+                            <i class="fas fa-hospital" style="font-size: 6rem; color: var(--primary-color);"></i>
+                            <div style="text-align: center; margin-top: 1.5rem; font-weight: 600; color: var(--primary-color); font-size: 2rem;">Red Total</div>
+                        </div>
+                        <div class="card-back" style="align-items: flex-start; justify-content: flex-start; padding: 2rem 1.2rem 1.2rem 1.2rem; overflow-y: auto;">
+                            <i class="fas fa-hospital" style="font-size: 2.2rem; color: var(--primary-color); margin-bottom: 0.5rem;"></i>
+                            <div style="font-weight: 700; color: var(--text-dark); font-size: 1.3rem; margin-bottom: 0.7rem;">Red Total</div>
+                            <ul style="color: var(--primary-color); font-size: 1.08em; margin: 0 0 0 1.2em; padding: 0;">
+                                <li>Clínica Alcívar</li>
+                                <li>Clínica Alborada</li>
+                                <li>Solca</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div style="text-align: center; margin-top: 0.5rem; font-weight: 600; color: var(--primary-color);">Red Total</div>
-                </a>
-                <a href="https://asisken.com/red-asisken2/business-category/red/redelite/" style="text-decoration: none;" target="_blank" rel="noopener noreferrer">
-                    <div class="logo-item">
-                        <i class="fas fa-hospital" style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <div class="logo-item flip-card" style="width: 340px; height: 340px;">
+                    <div class="card-inner">
+                        <div class="card-front" style="align-items: center; justify-content: center;">
+                            <i class="fas fa-hospital" style="font-size: 6rem; color: var(--primary-color);"></i>
+                            <div style="text-align: center; margin-top: 1.5rem; font-weight: 600; color: var(--primary-color); font-size: 2rem;">Red Élite</div>
+                        </div>
+                        <div class="card-back" style="align-items: flex-start; justify-content: flex-start; padding: 2rem 1.2rem 1.2rem 1.2rem; overflow-y: auto;">
+                            <i class="fas fa-hospital" style="font-size: 2.2rem; color: var(--primary-color); margin-bottom: 0.5rem;"></i>
+                            <div style="font-weight: 700; color: var(--text-dark); font-size: 1.3rem; margin-bottom: 0.7rem;">Red Élite</div>
+                            <ul style="color: var(--primary-color); font-size: 1.08em; margin: 0 0 0 1.2em; padding: 0;">
+                                <li>UESS Clinic</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div style="text-align: center; margin-top: 0.5rem; font-weight: 600; color: var(--primary-color);">Red Élite</div>
-                </a>
+                </div>
             </div>
             
             <div class="mt-4">
@@ -684,7 +830,7 @@
                 </div>
                 <div class="card animate__animated animate__fadeInUp animate__delay-2s">
                     <i class="fas fa-heartbeat card-icon"></i>
-                    <h3 class="card-title">Complicaciones del Recién Nacido</h3>
+                    <h3 class="card-title">Complicaciones de Maternidad</h3>
                     <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
                         <li>Hasta <strong>$4,200</strong></li>
                     </ul>
@@ -701,6 +847,9 @@
         <div class="slide" data-slide="9">
             <h1 class="slide-title">Seguro Dental</h1>
             <p class="slide-subtitle">Cobertura odontológica para afiliados</p>
+            <div style="text-align: center; font-size: 1.2rem; color: var(--primary-color); font-weight: 600; margin-bottom: 1.5rem;">
+                <i class="fas fa-phone-alt" style="margin-right: 0.5rem;"></i>Teléfono: 500-7070 opción 2 (Lun-Vie 09:00-17:30)
+            </div>
             <div class="cards-container" style="display: flex; flex-direction: column; gap: 2rem; align-items: center; max-width: 700px; margin: 0 auto;">
                 <div class="card animate__animated animate__fadeInUp" style="text-align: center;">
                     <h3 class="card-title" style="font-size: 1.3rem; margin-bottom: 1rem;">
@@ -721,7 +870,26 @@
                 </div>
             </div>
         </div>
+        <!-- SLIDE: COBERTURA BAJO REEMBOLSO -->
         <div class="slide" data-slide="10">
+            <h1 class="slide-title">Cobertura Bajo Reembolso</h1>
+            <p class="slide-subtitle">Beneficios adicionales cubiertos bajo modalidad de reembolso</p>
+            <div class="cards-container" style="display: flex; flex-direction: column; gap: 1.2rem; align-items: flex-start; max-width: 700px; margin: 0 auto;">
+                <div class="card animate__animated animate__fadeInUp" style="font-size: 1.1rem;">
+                    <ul style="margin-left: 1.2em; color: var(--primary-color);">
+                        <li>Cobertura dental por Accidente (como cualquier incapacidad)</li>
+                        <li>Tratamiento inmunológico (como cualquier incapacidad)</li>
+                        <li>Cobertura de tirillas mensuales por Diabetes (60 tirillas mensuales hasta <strong>$150,00</strong>)</li>
+                        <li>Vacunas (como cualquier incapacidad)</li>
+                        <li>Cobertura Anual para Métodos Anticonceptivos (hasta <strong>$100</strong>)</li>
+                        <li>Tratamientos de Enfermedades de Transmición Sexual (como cualquier incapacidad)</li>
+                        <li>Leche medicada (hasta <strong>$900</strong>)</li>
+                        <li>Medicina que no se encuentre en Vademecum</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="slide" data-slide="11">
             <h1 class="slide-title">Notificación de Hospitalizaciones</h1>
             <p class="slide-subtitle">Procedimientos y contactos para hospitalizaciones y emergencias</p>
             <div class="cards-container" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; max-width: 900px; margin: 2.5rem auto 0 auto;">
@@ -750,7 +918,7 @@
                 <em>*El proceso de pre-autorizaciones toma 72 horas laborables.</em>
             </div>
         </div>
-        <div class="slide" data-slide="11">
+        <div class="slide" data-slide="12">
             <h1 class="slide-title">Prestadores para Emergencias</h1>
             <p class="slide-subtitle">Hospitales disponibles para atención de emergencias</p>
             <div class="logo-container" style="margin-top: 2rem; justify-content: center;">
@@ -765,7 +933,7 @@
                 <em>En caso de emergencia, acudir a cualquiera de estos prestadores o comunicarse con los contactos de la siguiente diapositiva.</em>
             </div>
         </div>
-        <div class="slide" data-slide="12">
+        <div class="slide" data-slide="13">
             <h1 class="slide-title">Contactos de Atención</h1>
             <p class="slide-subtitle">Información de contacto para afiliados</p>
             <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: center; align-items: stretch; margin-top: 2.5rem;">
@@ -792,7 +960,7 @@
                 <em>Estos contactos están disponibles para cualquier requerimiento o emergencia de los afiliados del plan.</em>
             </div>
         </div>
-        <div class="slide" data-slide="13">
+        <div class="slide" data-slide="14">
             <h1 class="slide-title">Costos del Plan</h1>
             <p class="slide-subtitle">Elige la opción que mejor se adapte a tus necesidades</p>
             <div class="cards-container" style="display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: center; align-items: stretch; margin-top: 2.5rem;">
@@ -831,6 +999,42 @@
                 <em>Valores mensuales. Consulta condiciones y detalles con tu ejecutivo de cuenta.</em>
             </div>
         </div>
+
+        <!-- SLIDE 15: ASISTENCIA EN VIAJES -->
+        <div class="slide" data-slide="15">
+            <h1 class="slide-title">Asistencia en Viajes</h1>
+            <p class="slide-subtitle">Emergencias médicas en viajes al exterior</p>
+            <div class="cards-container" style="display: flex; flex-direction: column; gap: 1.2rem; align-items: flex-start; max-width: 700px; margin: 0 auto;">
+                <div class="card animate__animated animate__fadeInUp" style="font-size: 1.1rem;">
+                    <ul style="margin-left: 1.2em; color: var(--primary-color);">
+                        <li>Servicio de asistencia médica para emergencias en viajes al exterior por negocio o turismo. Previa autorización por Asisken para realizar la activación con mínimo 15 días de anticipación al viaje. No aplica vía reembolso. Aplican condiciones del proveedor*</li>
+                        <li>Aplica para 2 eventos por persona anual hasta máximo 30 días de viaje</li>
+                        <li>Se debe llenar formulario</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 16: PERÍODOS DE CARENCIA -->
+        <div class="slide" data-slide="16">
+            <h1 class="slide-title">Períodos de Carencia</h1>
+            <p class="slide-subtitle">Días de espera para acceder a cada cobertura</p>
+            <div class="cards-container" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; max-width: 900px; margin: 0 auto;">
+                <div class="card animate__animated animate__fadeInUp" style="min-width: 260px; max-width: 320px; text-align: center;">
+                    <h3 class="card-title">Ambulatoria</h3>
+                    <div class="card-description" style="font-size: 1.2rem; margin-top: 1rem;">Días de carencia: <strong>30 días</strong></div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp animate__delay-1s" style="min-width: 260px; max-width: 320px; text-align: center;">
+                    <h3 class="card-title">Hospitalaria</h3>
+                    <div class="card-description" style="font-size: 1.2rem; margin-top: 1rem;">Días de carencia: <strong>90 días</strong></div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp animate__delay-2s" style="min-width: 260px; max-width: 320px; text-align: center;">
+                    <h3 class="card-title">Maternidad</h3>
+                    <div class="card-description" style="font-size: 1.2rem; margin-top: 1rem;">Días de carencia: <strong>60 días</strong></div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- Controles de navegación -->
@@ -849,7 +1053,7 @@
     <script>
         // ===== VARIABLES GLOBALES =====
         let currentSlide = 1;
-        const totalSlides = 13;
+        const totalSlides = 16;
 
         // ===== FUNCIÓN PRINCIPAL DE CAMBIO DE SLIDE =====
         function changeSlide(direction) {
@@ -967,6 +1171,39 @@
                     this.style.transform = 'translateY(0) scale(1)';
                 });
             });
+
+            // === FLIP AL CLICK EN CARDS 4 Y 5 DEL SLIDE 3 ===
+            const slide3 = document.querySelector('[data-slide="3"]');
+            if (slide3) {
+                // Selecciona solo la 4ta y 5ta card (índices 3 y 4)
+                const flipCards = slide3.querySelectorAll('.flip-card');
+                [3, 4].forEach(idx => {
+                    if (flipCards[idx]) {
+                        flipCards[idx].addEventListener('click', function(e) {
+                            // Evita que el click en el interior propague y cause doble flip
+                            if (e.target.closest('.card-inner')) {
+                                this.classList.toggle('flip');
+                            }
+                        });
+                        // Cambia el cursor para indicar que es clickeable
+                        flipCards[idx].style.cursor = 'pointer';
+                    }
+                });
+            }
+
+            // === FLIP AL CLICK EN LAS 4 FLIP-CARDS DE REDES HOSPITALARIAS EN SLIDE 4 ===
+            const slide4 = document.querySelector('[data-slide="4"]');
+            if (slide4) {
+                const logoFlipCards = slide4.querySelectorAll('.logo-item.flip-card');
+                logoFlipCards.forEach(card => {
+                    card.addEventListener('click', function(e) {
+                        if (e.target.closest('.card-inner')) {
+                            this.classList.toggle('flip');
+                        }
+                    });
+                    card.style.cursor = 'pointer';
+                });
+            }
         });
 
         // ===== FUNCIÓN PARA AGREGAR CONTENIDO DINÁMICO =====
