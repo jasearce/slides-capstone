@@ -259,10 +259,10 @@ const slides = [
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-8 text-center">Crédito Ambulatorio</h2>
     <p className="text-xl text-insurance-gray text-center mb-6 max-w-4xl mx-auto leading-relaxed">
-      El crédito ambulatorio es un beneficio que permite al afiliado acceder a servicios médicos sin hospitalización 
-      con facilidades de pago y copagos preferenciales.
+      Es un sistema de pago directo que permite al afiliado recibir servicios médicos ambulatorios 
+      cancelando únicamente el copago correspondiente.
     </p>
-    <p className="text-lg font-semibold text-insurance-navy text-center mb-8">¿Cómo funciona?</p>
+    <p className="text-lg font-semibold text-insurance-navy text-center mb-8">¿Cómo funciona este beneficio?</p>
     
     <div className="bg-white p-12 md:mb-16 rounded-2xl shadow-lg">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -271,7 +271,7 @@ const slides = [
           <ul className="space-y-4 text-insurance-gray">
             <li className="flex items-start">
               <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5" />
-              <span>Consultas médicas especializadas</span>
+              <span>Consultas médicas</span>
             </li>
             <li className="flex items-start">
               <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5" />
@@ -298,10 +298,10 @@ const slides = [
             <div className="bg-insurance-light p-6 rounded-xl">
               <div className="flex items-center mb-3">
                 <CheckCircle className="w-8 h-8 text-green-500 mr-3" />
-                <h4 className="text-lg font-semibold text-insurance-navy">Copago Reducido</h4>
+                <h4 className="text-lg font-semibold text-insurance-navy">Reducción de Costos</h4>
               </div>
               <p className="text-insurance-gray text-sm">
-                Solo paga el porcentaje de copago correspondiente según la red utilizada.
+              Opción económica que garantiza atención sin comprometer el presupuesto.
               </p>
             </div>
             
