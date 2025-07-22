@@ -84,7 +84,7 @@ const Presentation = () => {
                 <ChevronLeft className="w-5 h-5 text-insurance-navy" />
               </button>
               
-              <span className="text-insurance-gray font-medium text-sm">
+              <span className="text-insurance-gray font-medium text-sm whitespace-nowrap">
                 {currentSlide + 1} / {totalSlides}
               </span>
               
