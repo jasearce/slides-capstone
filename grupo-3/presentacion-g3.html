@@ -458,6 +458,49 @@
         .flip-card.flip .card-inner {
             transform: rotateY(180deg);
         }
+
+        /* ===== FONDO OSCURO PARA SLIDES 2 A 16 ===== */
+        .slide:not(.cover-slide) {
+            background: var(--primary-color) !important;
+        }
+        .slide:not(.cover-slide) .slide-title,
+        .slide:not(.cover-slide) .slide-subtitle {
+            color: var(--white) !important;
+            -webkit-text-fill-color: var(--white) !important;
+            text-shadow: 1px 1px 6px rgba(0,0,0,0.18);
+        }
+        /* Asegurar que las cards mantengan su fondo y texto original */
+        .slide:not(.cover-slide) .card,
+        .slide:not(.cover-slide) .card-front,
+        .slide:not(.cover-slide) .card-back {
+            background: var(--background-color);
+            color: var(--text-dark);
+        }
+        /* Ajustar textos aclaratorios en slides oscuros */
+        .slide:not(.cover-slide) .slide-aclaracion,
+        .slide:not(.cover-slide) .slide-aclaracion *,
+        .slide[data-slide="5"] em,
+        .slide[data-slide="11"] em,
+        .slide[data-slide="12"] em,
+        .slide[data-slide="13"] em,
+        .slide[data-slide="15"] em,
+        .slide[data-slide="16"] em,
+        .slide[data-slide="11"] [style*="color: var(--text-light)"],
+        .slide[data-slide="12"] [style*="color: var(--text-light)"],
+        .slide[data-slide="13"] [style*="color: var(--text-light)"],
+        .slide[data-slide="15"] [style*="color: var(--text-light)"],
+        .slide[data-slide="16"] [style*="color: var(--text-light)"] {
+            color: #fff !important;
+        }
+        /* Ajustar textos aclaratorios en slides oscuros SOLO FUERA DE LAS CARDS */
+        .slide[data-slide="5"] > div[style*="text-align: center"] em,
+        .slide[data-slide="11"] > div[style*="text-align: left"] em,
+        .slide[data-slide="12"] > div[style*="text-align: center"] em,
+        .slide[data-slide="13"] > div[style*="text-align: left"] em,
+        .slide[data-slide="15"] > div[style*="text-align: center"] em,
+        .slide[data-slide="16"] > div[style*="text-align: center"] em {
+            color: #fff !important;
+        }
     </style>
 </head>
 <body>
@@ -482,7 +525,7 @@
             </p>
             <div class="mt-4 animate__animated animate__fadeInUp animate__delay-2s">
                 <p style="font-size: 1.2rem; opacity: 0.9;">
-                    <i class="fas fa-calendar-alt"></i> 2025 | <i class="fas fa-users"></i> Plan Grupal
+                    <i class="fas fa-calendar-alt"></i> 2025 | <i class="fas fa-users"></i> Gerentes
                 </p>
             </div>
         </div>
@@ -532,7 +575,7 @@
                             <i class="fas fa-dollar-sign card-icon"></i>
                             <h3 class="card-title">Cobertura Máxima</h3>
                             <p class="card-description">
-                                Hasta <strong>$4,000</strong> por persona por año de póliza.
+                                Hasta <strong>$15,000</strong> por persona por año de póliza.
                             </p>
                         </div>
                     </div>
@@ -555,7 +598,7 @@
                             <i class="fas fa-user-shield card-icon"></i>
                             <h3 class="card-title">Cobertura Preexistencias</h3>
                             <p class="card-description">
-                                Hasta <strong>$4,000</strong> para condiciones preexistentes.
+                                Hasta <strong>$15,000</strong> para condiciones preexistentes.
                             </p>
                         </div>
                     </div>
@@ -604,12 +647,6 @@
                             <h3 class="card-title">Cobertura GMM</h3>
                             <p class="card-description">
                             Cobertura Ambulatoria y Hospitalaria de <strong>$500,000</strong> (<em>luego de superar la cobertura inicial</em>).
-                            </p>
-                        </div>
-                        <div class="card-back">
-                            <h3 class="card-title">Si utilizo la Red Élite...</h3>
-                            <p class="card-description">
-                            El copago será del 80% a costos del plan base del contrato.
                             </p>
                         </div>
                     </div>
@@ -717,7 +754,7 @@
                     <h3 class="card-title">Crédito en Consultas Médicas</h3>
                     <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
                         <li>Medicina general, interna, ginecología y pediatría en Red: <strong>$4,00</strong>.</li>
-                        <li>Excepto en Centro Médico Familiar y Mediglobal: <strong>sin costo</strong>.</li>
+                        <li>Centro Médico Familiar y Mediglobal: <strong>sin costo</strong>.</li>
                     </ul>
                 </div>
                 <div class="card animate__animated animate__fadeInUp" style="min-width: 400px; min-height: 160px;">
@@ -743,7 +780,6 @@
                     <p class="card-description">
                         <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
                             <li>Guayaquil: <strong>$82.45</strong>. / Quito: <strong>$63.00</strong>. / Resto del país: <strong>$53.00</strong></li>
-                            <li>Excepto en Centro Médico Familiar y Mediglobal: <strong>sin costo</strong>.</li>
                         </ul>
                     </p>
                 </div>
@@ -842,7 +878,6 @@
                     <h3 class="card-title">Cobertura Maternidad</h3>
                     <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
                         <li>Sin copago. Hasta <strong>$2,200</strong></li>
-                        <li>Período de carencia: <strong>60 días</strong></li>
                     </ul>
                 </div>
                 <div class="card animate__animated animate__fadeInUp animate__delay-1s">
@@ -856,14 +891,14 @@
                     <i class="fas fa-heartbeat card-icon"></i>
                     <h3 class="card-title">Complicaciones de Maternidad</h3>
                     <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
-                        <li>Hasta <strong>$4,000</strong></li>
+                        <li>Hasta <strong>$2,200</strong></li>
                     </ul>
                 </div>
                 <div class="card animate__animated animate__fadeInUp animate__delay-3s">
                     <i class="fas fa-baby-carriage card-icon"></i>
                     <h3 class="card-title">Cuidados del Recién Nacido</h3>
                     <ul style="color: var(--text-light); font-size: 1em; margin: 0 0 0 1.2em; padding: 0;">
-                        <li>Hasta <strong>$4,000</strong></li>
+                        <li>Hasta <strong>$15,000</strong></li>
                     </ul>
                 </div>
             </div>
@@ -953,8 +988,8 @@
                     <i class="fas fa-ambulance card-icon"></i>
                     <h3 class="card-title">Emergencias</h3>
                     <ul style="color: var(--text-dark); font-size: 1em; margin-left: 1.2em; padding-left: 0.5em;">
-                        <li>El cliente puede ingresar al proveedor en red y registrarse como cliente ASISKEN.</li>
-                        <li>En caso de novedad, contactar a CAPSTONE.</li>
+                        <li>El cliente puede ingresar al proveedor en red y registrarse como cliente <strong>ASISKEN</strong>.</li>
+                        <li>En caso de novedad, contactar a <strong>CAPSTONE</strong>.</li>
                     </ul>
                 </div>
             </div>
@@ -965,16 +1000,16 @@
         <div class="slide" data-slide="12">
             <h1 class="slide-title">Prestadores para Emergencias</h1>
             <p class="slide-subtitle">Hospitales disponibles para atención de emergencias</p>
-            <div class="logo-container" style="margin-top: 2rem; justify-content: center;">
-                <div class="logo-item animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
-                    <img src="https://github.com/jasearce/presentaciones-assets/blob/main/logo-kennedy.png?raw=true" alt="Hospital Kennedy" title="Hospital Kennedy">
+            <div class="logo-container" style="margin-top: 2rem; justify-content: center; gap: 3.5rem;">
+                <div class="logo-item animate__animated animate__fadeInUp" style="animation-delay: 0.1s; width: 220px; height: 220px; display: flex; align-items: center; justify-content: center;">
+                    <img src="https://github.com/jasearce/presentaciones-assets/blob/main/logo-kennedy.png?raw=true" alt="Hospital Kennedy" title="Hospital Kennedy" style="max-width: 180px; max-height: 180px; object-fit: contain;" />
                 </div>
-                <div class="logo-item animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-                    <img src="https://github.com/jasearce/presentaciones-assets/blob/main/output-onlinepngtools%20(1).png?raw=true" alt="MediGlobal" title="MediGlobal">
+                <div class="logo-item animate__animated animate__fadeInUp" style="animation-delay: 0.2s; width: 220px; height: 220px; display: flex; align-items: center; justify-content: center;">
+                    <img src="https://github.com/jasearce/presentaciones-assets/blob/main/output-onlinepngtools%20(1).png?raw=true" alt="MediGlobal" title="MediGlobal" style="max-width: 180px; max-height: 180px; object-fit: contain;" />
                 </div>
             </div>
             <div style="margin-top: 2rem; text-align: center; color: var(--text-light); font-size: 1.1rem;">
-                <em>En caso de emergencia, acudir a cualquiera de estos prestadores o comunicarse con los contactos de la siguiente diapositiva.</em>
+                <em>En caso de emergencia, acudir a cualquiera de estos prestadores o comunicarse con los contactos del bróker.</em>
             </div>
         </div>
 
@@ -982,14 +1017,31 @@
         <div class="slide" data-slide="13">
             <h1 class="slide-title">Asistencia en Viajes</h1>
             <p class="slide-subtitle">Emergencias médicas en viajes al exterior</p>
-            <div class="cards-container" style="display: flex; flex-direction: column; gap: 1.2rem; align-items: flex-start; max-width: 700px; margin: 0 auto;">
-                <div class="card animate__animated animate__fadeInUp" style="font-size: 1.1rem;">
-                    <ul style="margin-left: 1.2em; color: var(--primary-color);">
-                        <li>Servicio de asistencia médica para emergencias en viajes al exterior por negocio o turismo. Previa autorización por Asisken para realizar la activación con mínimo 15 días de anticipación al viaje. No aplica vía reembolso. Aplican condiciones del proveedor*</li>
-                        <li>Aplica para 2 eventos por persona anual hasta máximo 30 días de viaje</li>
-                        <li>Se debe llenar formulario</li>
-                    </ul>
+            <div class="cards-container" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, auto); gap: 1.2rem; align-items: flex-start; max-width: 700px; margin: 0 auto;">
+                <div class="card animate__animated animate__fadeInUp" style="min-width: 320px; grid-column: 1 / span 2;">
+                    <i class="fas fa-plane-departure card-icon"></i>
+                    <h3 class="card-title">Asistencia médica en viajes</h3>
+                    <div class="card-description">
+                        Servicio de asistencia médica para emergencias en viajes al exterior por negocio o turismo. Previa autorización por Asisken para realizar la activación con mínimo 15 días de anticipación al viaje.
+                    </div>
                 </div>
+                <div class="card animate__animated animate__fadeInUp animate__delay-1s" style="min-width: 320px;">
+                    <i class="fas fa-calendar-alt card-icon"></i>
+                    <h3 class="card-title">Límite de eventos</h3>
+                    <div class="card-description">
+                        Aplica para 2 eventos por persona anual hasta máximo 30 días de viaje
+                    </div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp animate__delay-2s" style="min-width: 320px;">
+                    <i class="fas fa-file-signature card-icon"></i>
+                    <h3 class="card-title">Requisito de formulario</h3>
+                    <div class="card-description">
+                        Se debe llenar formulario
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 1rem; text-align: left; color: var(--text-light); font-size: 1.05rem; max-width: 900px;">
+                <em>No aplica vía reembolso. Aplican condiciones del proveedor*</em>
             </div>
         </div>
 
@@ -1046,7 +1098,7 @@
                 <!-- Card Titular -->
                 <div class="card animate__animated animate__fadeInUp" style="min-width: 260px; max-width: 320px; flex: 1 1 260px; text-align: center; border: 2px solid var(--secondary-color); box-shadow: 0 8px 24px rgba(0,140,126,0.08);">
                     <h3 class="card-title" style="font-size: 1.4rem; margin-bottom: 0.5rem;">Titular</h3>
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 0.5rem;">$33.31</div>
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 0.5rem;">$47.99</div>
                     <div class="card-description" style="font-size: 1.1rem; margin-bottom: 1.2rem;">Cobertura individual para el titular del plan.</div>
                     <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem 0; color: var(--text-light);">
                         <li><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> Acceso a toda la red</li>
@@ -1056,7 +1108,7 @@
                 <!-- Card Titular + 1 Beneficiario -->
                 <div class="card animate__animated animate__fadeInUp animate__delay-1s" style="min-width: 260px; max-width: 320px; flex: 1 1 260px; text-align: center; border: 2.5px solid var(--accent-color); box-shadow: 0 12px 32px rgba(226,171,51,0.10); background: var(--light-bg);">
                     <h3 class="card-title" style="font-size: 1.4rem; margin-bottom: 0.5rem;">Titular + 1 Beneficiario</h3>
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-color); margin-bottom: 0.5rem;">$103.99</div>
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-color); margin-bottom: 0.5rem;">$124.68</div>
                     <div class="card-description" style="font-size: 1.1rem; margin-bottom: 1.2rem;">Incluye al titular y un beneficiario adicional.</div>
                     <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem 0; color: var(--text-light);">
                         <li><i class="fas fa-check-circle" style="color: var(--secondary-color);"></i> Cobertura para ambos</li>
@@ -1066,7 +1118,7 @@
                 <!-- Card Titular + Familia -->
                 <div class="card animate__animated animate__fadeInUp animate__delay-2s" style="min-width: 260px; max-width: 320px; flex: 1 1 260px; text-align: center; border: 2px solid var(--primary-color); box-shadow: 0 8px 24px rgba(12,41,57,0.10);">
                     <h3 class="card-title" style="font-size: 1.4rem; margin-bottom: 0.5rem;">Titular + Familia</h3>
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.5rem;">$178.89</div>
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.5rem;">$207.35</div>
                     <div class="card-description" style="font-size: 1.1rem; margin-bottom: 1.2rem;">Cobertura para el titular y su núcleo familiar.</div>
                     <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem 0; color: var(--text-light);">
                         <li><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> Protección integral</li>
