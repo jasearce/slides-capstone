@@ -255,7 +255,72 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 9: Créditos Ambulatorios
+  // Slide 9: Crédito Ambulatorio
+  <div className="fade-in">
+    <h2 className="text-5xl font-bold text-insurance-navy mb-8 text-center">Crédito Ambulatorio</h2>
+    <p className="text-xl text-insurance-gray text-center mb-6 max-w-4xl mx-auto leading-relaxed">
+      El crédito ambulatorio es un beneficio que permite al afiliado acceder a servicios médicos sin hospitalización 
+      con facilidades de pago y copagos preferenciales.
+    </p>
+    <p className="text-lg font-semibold text-insurance-navy text-center mb-8">¿Cómo funciona?</p>
+    
+    <div className="bg-white p-12 md:mb-16 rounded-2xl shadow-lg">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <h3 className="text-2xl font-semibold text-insurance-navy mb-6">Servicios Incluidos:</h3>
+          <ul className="space-y-4 text-insurance-gray">
+            <li className="flex items-start">
+              <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5" />
+              <span>Consultas médicas especializadas</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5" />
+              <span>Exámenes de laboratorio y diagnóstico</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5" />
+              <span>Procedimientos menores ambulatorios</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5" />
+              <span>Medicamentos en farmacias afiliadas</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5" />
+              <span>Terapias especializadas</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 className="text-2xl font-semibold text-insurance-navy mb-6">Ventajas del Crédito:</h3>
+          <div className="space-y-6">
+            <div className="bg-insurance-light p-6 rounded-xl">
+              <div className="flex items-center mb-3">
+                <CheckCircle className="w-8 h-8 text-green-500 mr-3" />
+                <h4 className="text-lg font-semibold text-insurance-navy">Copago Reducido</h4>
+              </div>
+              <p className="text-insurance-gray text-sm">
+                Solo paga el porcentaje de copago correspondiente según la red utilizada.
+              </p>
+            </div>
+            
+            <div className="bg-insurance-light p-6 rounded-xl">
+              <div className="flex items-center mb-3">
+                <Clock className="w-8 h-8 text-insurance-blue mr-3" />
+                <h4 className="text-lg font-semibold text-insurance-navy">Proceso Ágil</h4>
+              </div>
+              <p className="text-insurance-gray text-sm">
+                Trámite directo con el prestador, sin necesidad de reembolsos posteriores.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+
+  // Slide 10: Crédito: Consultas Médicas
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Crédito para Consultas Médicas</h2>
     <div className="bg-white p-12 rounded-2xl shadow-lg">
@@ -317,9 +382,9 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 10: Crédito Ambulatorios
+  // Slide 11: Crédito: Examenes y Procedimientos
   <div className="fade-in">
-    <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Exámenes y Procedimientos</h2>
+    <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Crédito para Exámenes y Procedimientos</h2>
     <div className="bg-white p-12 rounded-2xl shadow-lg">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
@@ -369,9 +434,9 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 11: Farmacias
+  // Slide 12: Crédito: Farmacias
   <div className="fade-in">
-    <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Farmacias</h2>
+    <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Crédito en Farmacias</h2>
     <div className="flex flex-col md:flex-row gap-8 justify-center items-center max-w-4xl mx-auto">
       <div className="bg-white p-8 rounded-2xl shadow-lg text-center w-full md:w-80">
         <Clock className="w-16 h-16 text-insurance-blue mx-auto mb-6" />
@@ -390,7 +455,7 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 12: Maternidad
+  // Slide 13: Maternidad
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Maternidad</h2>
     <div className="bg-white p-12 rounded-2xl shadow-lg">
@@ -445,7 +510,7 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 13: Beneficios Adicionales
+  // Slide 14: Beneficios Adicionales
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Beneficios Adicionales</h2>
     <div className="bg-white p-12 rounded-2xl shadow-lg">
@@ -514,7 +579,97 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 14: Procesos para Hospitalizaciones
+  // Slide 15: Proceso para Reembolsos
+  <div className="fade-in">
+    <h2 className="text-4xl md:text-5xl font-bold text-insurance-navy mb-6 text-center">Proceso para Reembolsos</h2>
+    <p className="text-lg text-insurance-gray text-center mb-4 max-w-4xl mx-auto">
+      Gestiona tus reembolsos de manera rápida y sencilla siguiendo estos pasos.
+    </p>
+    <p className="text-base font-semibold text-insurance-navy text-center mb-6">Documentación necesaria:</p>
+    
+    <div className="bg-white p-8 rounded-2xl shadow-lg">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 className="text-xl font-semibold text-insurance-navy mb-4">Documentos Requeridos:</h3>
+          <ul className="space-y-2 text-insurance-gray text-sm">
+            <li className="flex items-start">
+              <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+              <span>Formulario de solicitud completado</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+              <span>Facturas originales de servicios médicos</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+              <span>Recetas médicas originales</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+              <span>Resultados de exámenes realizados</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+              <span>Copia de cédula titular y beneficiario</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+              <span>Datos bancarios para transferencia</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 className="text-xl font-semibold text-insurance-navy mb-4">Proceso de Reembolso:</h3>
+          <div className="space-y-3">
+            <div className="bg-insurance-light p-4 rounded-lg">
+              <div className="flex items-center mb-2">
+                <FileText className="w-6 h-6 text-insurance-blue mr-2" />
+                <h4 className="text-base font-semibold text-insurance-navy">1. Presentación</h4>
+              </div>
+              <p className="text-insurance-gray text-xs">
+                Entrega documentación en oficinas o vía email.
+              </p>
+            </div>
+            
+            <div className="bg-insurance-light p-4 rounded-lg">
+              <div className="flex items-center mb-2">
+                <BarChart3 className="w-6 h-6 text-insurance-blue mr-2" />
+                <h4 className="text-base font-semibold text-insurance-navy">2. Revisión</h4>
+              </div>
+              <p className="text-insurance-gray text-xs">
+                Verificación y validación de cobertura.
+              </p>
+            </div>
+            
+            <div className="bg-insurance-light p-4 rounded-lg">
+              <div className="flex items-center mb-2">
+                <DollarSign className="w-6 h-6 text-green-500 mr-2" />
+                <h4 className="text-base font-semibold text-insurance-navy">3. Pago</h4>
+              </div>
+              <p className="text-insurance-gray text-xs">
+                Transferencia directa a cuenta bancaria.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-4 p-4 bg-green-50 rounded-lg border-l-4 border-green-400">
+            <div className="flex items-start">
+              <Clock className="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+              <div>
+                <h4 className="text-base font-semibold text-insurance-navy mb-1">Tiempo:</h4>
+                <p className="text-green-800 text-xs font-bold">
+                  8 días laborables desde presentación completa
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+
+  // Slide 16: Procesos para Hospitalizaciones
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Procesos para Hospitalizaciones</h2>
     <div className="bg-white p-12 rounded-2xl shadow-lg">
@@ -580,7 +735,7 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 15: Costos
+  // Slide 17: Costos
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Costos</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -623,7 +778,7 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 16: Soporte & Atención
+  // Slide 18: Soporte & Atención
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Soporte & Atención</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
