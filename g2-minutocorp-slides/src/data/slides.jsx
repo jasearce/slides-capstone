@@ -140,12 +140,18 @@ const slides = [
         </div>
       </div>
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
       <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
         <Building2 className="w-12 h-12 text-insurance-blue mx-auto mb-4" />
         <h3 className="text-lg font-semibold text-insurance-navy mb-2">Hospitalización</h3>
         <p className="text-insurance-gray text-sm">0% copago</p>
         <div className="text-2xl font-bold text-insurance-blue mb-1">$500,000</div>
+      </div>
+      <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
+        <Stethoscope className="w-12 h-12 text-insurance-blue mx-auto mb-4" />
+        <h3 className="text-lg font-semibold text-insurance-navy mb-2">Ambulatorio</h3>
+        <p className="text-insurance-gray text-sm">cobertura</p>
+        <div className="text-2xl font-bold text-insurance-blue mb-1">100%</div>
       </div>
       <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
         <Heart className="w-12 h-12 text-insurance-blue mx-auto mb-4" />
@@ -228,11 +234,10 @@ const slides = [
         <Clock className="w-12 h-12 text-insurance-blue mb-6" />
         <h3 className="text-2xl font-semibold text-insurance-navy mb-4">Límite de días en UCI</h3>
         <div className="text-center mb-4">
-          <div className="text-3xl font-bold text-insurance-blue">$4,000</div>
-          <p className="text-sm text-insurance-gray">Cobertura máxima</p>
+          <div className="text-3xl font-bold text-insurance-blue">Sin límite</div>
         </div>
         <ul className="text-insurance-gray space-y-3">
-          <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Sin límite de días</li>
+          <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Cobertura máxima: $4,000</li>
           <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Todas las redes incluidas</li>
         </ul>
       </div>

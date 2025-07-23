@@ -15,7 +15,7 @@ const slides = [
     </p>
     <div className="bg-white p-6 rounded-2xl shadow-lg inline-block">
       <p className="text-base md:text-lg text-insurance-gray">
-        <i className="fas fa-calendar-alt mr-2"></i>2025 | <i className="fas fa-users ml-4 mr-2"></i>Operativos
+        <i className="fas fa-calendar-alt mr-2"></i>2025 | <i className="fas fa-users ml-4 mr-2"></i>Gerentes
       </p>
     </div>
   </div>,
@@ -27,7 +27,7 @@ const slides = [
       <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg max-w-2xl w-full">
         <div className="text-center mb-6">
           <h3 className="text-2xl md:text-3xl font-bold text-insurance-navy mb-2">Plan Corporativo</h3>
-          <div className="text-3xl md:text-4xl font-bold text-insurance-blue">$4,200</div>
+          <div className="text-3xl md:text-4xl font-bold text-insurance-blue">$15,000</div>
         </div>
         
         <div className="space-y-3 md:space-y-4">
@@ -43,7 +43,7 @@ const slides = [
           
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 border-b border-gray-200">
             <span className="text-base md:text-lg font-semibold text-insurance-navy mb-1 sm:mb-0">Monto máximo de cobertura:</span>
-            <span className="text-base md:text-lg text-insurance-gray">$4,200</span>
+            <span className="text-base md:text-lg text-insurance-gray">$15,000</span>
           </div>
           
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 border-b border-gray-200">
@@ -72,17 +72,17 @@ const slides = [
       <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
         <DollarSign className="w-16 h-16 text-insurance-blue mx-auto mb-6" />
         <h3 className="text-xl font-semibold text-insurance-navy mb-4">Deducible</h3>
-        <p className="text-insurance-gray">$100</p>
+        <p className="text-insurance-gray">$120</p>
       </div>
       <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
         <Building2 className="w-16 h-16 text-insurance-blue mx-auto mb-6" />
         <h3 className="text-xl font-semibold text-insurance-navy mb-4">Cobertura Hospitalaria</h3>
-        <p className="text-insurance-gray">$4,200</p>
+        <p className="text-insurance-gray">$15,000</p>
       </div>
       <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
         <Stethoscope className="w-16 h-16 text-insurance-blue mx-auto mb-6" />
         <h3 className="text-xl font-semibold text-insurance-navy mb-4">Cobertura Ambulatoria</h3>
-        <p className="text-insurance-gray">$4,200</p>
+        <p className="text-insurance-gray">$15,000</p>
       </div>
     </div>
   </div>,
@@ -94,7 +94,7 @@ const slides = [
       <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
         <FileText className="w-16 h-16 text-insurance-blue mx-auto mb-6" />
         <h3 className="text-xl font-semibold text-insurance-navy mb-4">Preexistencias</h3>
-        <p className="text-insurance-gray">$4,200</p>
+        <p className="text-insurance-gray">$15,000</p>
       </div>
       <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
         <CalendarClock className="w-16 h-16 text-insurance-blue mx-auto mb-6" />
@@ -109,7 +109,72 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 5: Copago Hospitalario
+  // Slide 5: Plan Complementario
+  <div className="fade-in">
+    <h2 className="text-5xl font-bold text-insurance-navy mb-8 text-center">Plan Complementario</h2>
+    <p className="text-xl text-insurance-gray text-center mb-6 max-w-4xl mx-auto leading-relaxed">
+      Gastos médicos mayores que se activa cuando los gastos superen los $15,000 del plan base
+    </p>
+    <div className="bg-white p-8 rounded-2xl shadow-lg mb-8">
+      <h3 className="text-2xl font-semibold text-insurance-navy mb-6 text-center">Se activa para casos de:</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-4">
+          <div className="flex items-center">
+            <Building2 className="w-6 h-6 text-insurance-blue mr-4" />
+            <span className="text-insurance-gray">Hospitalizaciones complejas</span>
+          </div>
+          <div className="flex items-center">
+            <Stethoscope className="w-6 h-6 text-insurance-blue mr-4" />
+            <span className="text-insurance-gray">Cirugías mayores</span>
+          </div>
+        </div>
+        <div className="space-y-4">
+          <div className="flex items-center">
+            <Heart className="w-6 h-6 text-insurance-blue mr-4" />
+            <span className="text-insurance-gray">Enfermedades catastróficas</span>
+          </div>
+          <div className="flex items-center">
+            <Target className="w-6 h-6 text-insurance-blue mr-4" />
+            <span className="text-insurance-gray">Tratamientos especializados</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+      <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
+        <Building2 className="w-12 h-12 text-insurance-blue mx-auto mb-4" />
+        <h3 className="text-lg font-semibold text-insurance-navy mb-2">Hospitalización</h3>
+        <p className="text-insurance-gray text-sm">0% copago</p>
+        <div className="text-2xl font-bold text-insurance-blue mb-1">$500,000</div>
+      </div>
+      <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
+        <Stethoscope className="w-12 h-12 text-insurance-blue mx-auto mb-4" />
+        <h3 className="text-lg font-semibold text-insurance-navy mb-2">Ambulatorio</h3>
+        <p className="text-insurance-gray text-sm">cobertura</p>
+        <div className="text-2xl font-bold text-insurance-blue mb-1">100%</div>
+      </div>
+      <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
+        <Heart className="w-12 h-12 text-insurance-blue mx-auto mb-4" />
+        <h3 className="text-lg font-semibold text-insurance-navy mb-2">Medicina</h3>
+        <p className="text-insurance-gray text-sm">copago</p>
+        <div className="text-2xl font-bold text-insurance-blue mb-1">0%</div>
+      </div>
+      <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
+        <Target className="w-12 h-12 text-insurance-blue mx-auto mb-4" />
+        <h3 className="text-lg font-semibold text-insurance-navy mb-2">Trasplantes</h3>
+        <p className="text-insurance-gray text-sm">hasta</p>
+        <div className="text-2xl font-bold text-insurance-blue mb-1">$250,000</div>
+      </div>
+      <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
+        <FileText className="w-12 h-12 text-insurance-blue mx-auto mb-4" />
+        <h3 className="text-lg font-semibold text-insurance-navy mb-2">Preexistencias</h3>
+        <p className="text-insurance-gray text-sm">hasta</p>
+        <div className="text-2xl font-bold text-insurance-blue mb-1">$1,000</div>
+      </div>
+    </div>
+  </div>,
+
+  // Slide 6: Copago Hospitalario
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-8 text-center">Cobertura Hospitalaria</h2>
     <p className="text-xl text-insurance-gray text-center mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -131,13 +196,13 @@ const slides = [
       <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
         <DollarSign className="w-16 h-16 text-insurance-blue mx-auto mb-6" />
         <h3 className="text-xl font-semibold text-insurance-navy mb-4">Monto Máximo</h3>
-        <div className="text-4xl font-bold text-insurance-blue mb-2">$4,200</div>
+        <div className="text-4xl font-bold text-insurance-blue mb-2">$15,000</div>
         <p className="text-insurance-gray">Cobertura anual</p>
       </div>
     </div>
   </div>,
 
-  // Slide 6: Cobertura Hospitalaria (Beneficios)
+  // Slide 7: Cobertura Hospitalaria (Beneficios)
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Otras Coberturas Hospitalarias</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -145,7 +210,7 @@ const slides = [
         <Heart className="w-12 h-12 text-insurance-blue mb-6" />
         <h3 className="text-2xl font-semibold text-insurance-navy mb-4">Cuarto y Alimento</h3>
         <div className="text-center mb-4">
-          <div className="text-3xl font-bold text-insurance-blue">$120.00</div>
+          <div className="text-3xl font-bold text-insurance-blue">$250.00</div>
           <p className="text-sm text-insurance-gray">Valor máximo</p>
         </div>
         <ul className="text-insurance-gray space-y-3">
@@ -157,7 +222,7 @@ const slides = [
         <Stethoscope className="w-12 h-12 text-insurance-blue mb-6" />
         <h3 className="text-2xl font-semibold text-insurance-navy mb-4">Unidad de Cuidados Intensivos</h3>
         <div className="text-center mb-4">
-          <div className="text-3xl font-bold text-insurance-blue">$4,200</div>
+          <div className="text-3xl font-bold text-insurance-blue">$15,000</div>
           <p className="text-sm text-insurance-gray">Monto máximo</p>
         </div>
         <ul className="text-insurance-gray space-y-3">
@@ -172,14 +237,14 @@ const slides = [
           <div className="text-3xl font-bold text-insurance-blue">Sin límite</div>
         </div>
         <ul className="text-insurance-gray space-y-3">
-          <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Cobertura máxima: $4,200</li>
+          <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Cobertura máxima: $15,000</li>
           <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Todas las redes incluidas</li>
         </ul>
       </div>
     </div>
   </div>,
 
-  // Slide 7: Red de Hospitales
+  // Slide 8: Red de Hospitales
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Red de Hospitales</h2>
     <div className="bg-white p-12 rounded-2xl shadow-lg">
@@ -225,7 +290,7 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 8: Cobertura Ambulatoria
+  // Slide 9: Cobertura Ambulatoria
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-8 text-center">Cobertura Ambulatoria</h2>
     <p className="text-xl text-insurance-gray text-center mb-6 max-w-4xl mx-auto leading-relaxed">
@@ -248,13 +313,13 @@ const slides = [
       <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
         <DollarSign className="w-16 h-16 text-insurance-blue mx-auto mb-6" />
         <h3 className="text-xl font-semibold text-insurance-navy mb-4 leading-tight">Monto<br />Máximo</h3>
-        <div className="text-4xl font-bold text-insurance-blue mb-2">$4,200</div>
+        <div className="text-4xl font-bold text-insurance-blue mb-2">$15,000</div>
         <p className="text-insurance-gray">Cobertura anual</p>
       </div>
     </div>
   </div>,
 
-  // Slide 9: Crédito Ambulatorio
+  // Slide 10: Crédito Ambulatorio
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-8 text-center">Crédito Ambulatorio</h2>
     <p className="text-xl text-insurance-gray text-center mb-6 max-w-4xl mx-auto leading-relaxed">
@@ -319,7 +384,7 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 10: Crédito: Consultas Médicas
+  // Slide 11: Crédito: Consultas Médicas
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Crédito para Consultas Médicas</h2>
     <div className="bg-white p-12 rounded-2xl shadow-lg">
@@ -381,7 +446,7 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 11: Crédito: Examenes y Procedimientos
+  // Slide 12: Crédito: Examenes y Procedimientos
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Crédito para Exámenes y Procedimientos</h2>
     <div className="bg-white p-12 rounded-2xl shadow-lg">
@@ -433,7 +498,7 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 12: Crédito: Farmacias
+  // Slide 13: Crédito: Farmacias
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Crédito en Farmacias</h2>
     <div className="flex flex-col md:flex-row gap-8 justify-center items-center max-w-4xl mx-auto">
@@ -454,7 +519,7 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 13: Maternidad
+  // Slide 14: Maternidad
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Maternidad</h2>
     <div className="bg-white p-12 rounded-2xl shadow-lg">
@@ -470,7 +535,7 @@ const slides = [
             </div>
           </div>
           <div className="bg-gray-50 p-4 rounded-xl text-center md:min-w-[120px]">
-            <div className="text-2xl font-bold text-insurance-blue">$1,200</div>
+            <div className="text-2xl font-bold text-insurance-blue">$2,200</div>
             <p className="text-sm text-insurance-gray">Monto máximo</p>
           </div>
         </div>
@@ -501,7 +566,7 @@ const slides = [
             </div>
           </div>
           <div className="bg-gray-50 p-4 rounded-xl text-center md:min-w-[120px]">
-            <div className="text-2xl font-bold text-insurance-blue">$4,200</div>
+            <div className="text-2xl font-bold text-insurance-blue">$15,000</div>
             <p className="text-sm text-insurance-gray">Monto máximo</p>
           </div>
         </div>
@@ -509,7 +574,7 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 14: Beneficios Adicionales
+  // Slide 15: Beneficios Adicionales
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Beneficios Adicionales</h2>
     <div className="bg-white p-12 rounded-2xl shadow-lg">
@@ -526,21 +591,21 @@ const slides = [
             <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5" />
             <div>
               <h3 className="text-lg font-semibold text-insurance-navy mb-1">Emergencia Ambulatoria</h3>
-              <p className="text-insurance-gray text-sm">Por accidente, sin deducible ni copago. <span className="font-bold text-insurance-blue">Hasta $400</span></p>
+              <p className="text-insurance-gray text-sm">Por accidente, sin deducible ni copago. <span className="font-bold text-insurance-blue">Hasta $1,000</span></p>
             </div>
           </div>
           <div className="flex items-start">
             <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5" />
             <div>
               <h3 className="text-lg font-semibold text-insurance-navy mb-1">Atención Oncológica</h3>
-              <p className="text-insurance-gray text-sm">Integral con cirugía reconstructiva y rehabilitación. <span className="font-bold text-insurance-blue">Hasta $4,200</span></p>
+              <p className="text-insurance-gray text-sm">Integral con cirugía reconstructiva y rehabilitación. <span className="font-bold text-insurance-blue">Hasta $15,000</span></p>
             </div>
           </div>
           <div className="flex items-start">
             <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5" />
             <div>
               <h3 className="text-lg font-semibold text-insurance-navy mb-1">Trasplante de Órganos</h3>
-              <p className="text-insurance-gray text-sm">Según ley de la materia, aplica deducible y copago. <span className="font-bold text-insurance-blue">Hasta $4,200</span></p>
+              <p className="text-insurance-gray text-sm">Según ley de la materia, aplica deducible y copago. <span className="font-bold text-insurance-blue">Hasta $15,000</span></p>
             </div>
           </div>
         </div>
@@ -578,7 +643,7 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 15: Proceso para Reembolsos
+  // Slide 16: Proceso para Reembolsos
   <div className="fade-in">
     <h2 className="text-4xl md:text-5xl font-bold text-insurance-navy mb-6 text-center">Proceso para Reembolsos</h2>
     <p className="text-lg text-insurance-gray text-center mb-4 max-w-4xl mx-auto">
@@ -668,7 +733,7 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 16: Procesos para Hospitalizaciones
+  // Slide 17: Procesos para Hospitalizaciones
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Procesos para Hospitalizaciones</h2>
     <div className="bg-white p-12 rounded-2xl shadow-lg">
@@ -734,26 +799,26 @@ const slides = [
     </div>
   </div>,
 
-  // Slide 17: Costos
+  // Slide 18: Costos
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Costos</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div className="bg-white p-8 rounded-2xl shadow-lg">
         <div className="text-center mb-6">
           <h3 className="text-2xl font-semibold text-insurance-navy mb-4">Titular</h3>
-          <div className="text-4xl font-bold text-insurance-blue mb-2">$14,62</div>
+          <div className="text-4xl font-bold text-insurance-blue mb-2">$47.99</div>
           <p className="text-insurance-gray">Cobertura para el titular del plan</p>
         </div>
         <ul className="space-y-3 text-insurance-gray">
           <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Acceso a todas las redes</li>
           <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Beneficios completos</li>
-          <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Cobertura hasta $4,200</li>
+          <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Cobertura hasta $15,000 + Plan Complementario</li>
         </ul>
       </div>
       <div className="bg-white p-8 rounded-2xl shadow-lg">
         <div className="text-center mb-6">
           <h3 className="text-2xl font-semibold text-insurance-navy mb-4">Titular + 1 Beneficiario</h3>
-          <div className="text-4xl font-bold text-insurance-blue mb-2">$53.07</div>
+          <div className="text-4xl font-bold text-insurance-blue mb-2">$124.68</div>
           <p className="text-insurance-gray">Incluye titular y un beneficiario adicional</p>
         </div>
         <ul className="space-y-3 text-insurance-gray">
@@ -765,19 +830,19 @@ const slides = [
       <div className="bg-white p-8 rounded-2xl shadow-lg">
         <div className="text-center mb-6">
           <h3 className="text-2xl font-semibold text-insurance-navy mb-4">Titular + Familia</h3>
-          <div className="text-4xl font-bold text-insurance-blue mb-2">$95.38</div>
+          <div className="text-4xl font-bold text-insurance-blue mb-2">$207.35</div>
           <p className="text-insurance-gray">Cobertura para titular y núcleo familiar</p>
         </div>
         <ul className="space-y-3 text-insurance-gray">
           <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Protección integral</li>
           <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Todos los beneficios del plan</li>
-          <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Cobertura hasta $4,200</li>
+          <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Cobertura hasta $15,000 + Plan Complementario</li>
         </ul>
       </div>
     </div>
   </div>,
 
-  // Slide 18: Soporte & Atención
+  // Slide 19: Soporte & Atención
   <div className="fade-in">
     <h2 className="text-5xl font-bold text-insurance-navy mb-12 text-center">Soporte & Atención</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
